@@ -1,0 +1,19 @@
+---
+version: "3.7"
+services:
+  web:
+    image: nginx:1.19.6-alpine
+    restart: unless-stopped
+    expose:
+      - "80"
+    environment:
+      VIRTUAL_PORT: 80
+      VIRTUAL_HOST: $PROXY_VIRTUAL_HOST
+    volumes:
+      - ./dist:/usr/share/nginx/html:ro
+    networks:
+      - net
+networks:
+  net:
+    external:
+      name: net
