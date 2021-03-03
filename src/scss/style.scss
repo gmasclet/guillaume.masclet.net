@@ -39,18 +39,24 @@ h3 {
 
 header {
   padding: 20px 0;
+  height: 150px;
   background-color: #ededed;
 
-  img {
-    width: 120px;
+  .container {
+    position: relative;
   }
 
-  .container {
-    display: flex;
-    justify-content: space-between;
+  img {
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 150px;
   }
 
   ul {
+    position: absolute;
+    right: 0;
+    top: 0;
     margin-top: 0;
 
     li {
