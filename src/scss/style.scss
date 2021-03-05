@@ -1,13 +1,13 @@
 body {
   font-family: 'Helvetica', 'Arial', sans-serif;
-  color: #000000;
-  font-size: 90%;
+  color: #444;
+  font-size: 100%;
   background-color: #ededed;
   margin: 0;
 }
 
 .container {
-  max-width: 1200px;
+  max-width: 1000px;
   margin: 0 auto;
 }
 
@@ -81,6 +81,11 @@ main {
 
   section {
     padding: 20px 0;
+    text-align: justify;
+  }
+
+  a {
+    color: #444;
   }
 
   section p:last-child {
@@ -96,6 +101,17 @@ main {
 
     img {
       width: 150px;
+      margin-right: 20px;
+    }
+  }
+
+  .mission {
+    display: flex;
+    margin: 0 0 20px;
+
+    img {
+      width: 100px;
+      height: 100px;
       margin-right: 20px;
     }
   }
