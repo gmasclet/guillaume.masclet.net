@@ -1,5 +1,23 @@
+@font-face {
+  font-family: 'Open Sans';
+  font-style: normal;
+  font-display: swap;
+  font-weight: 400;
+  src: url("./webfonts/open-sans-latin-400-normal.woff2") format('woff2'), url("./webfonts/open-sans-all-400-normal.woff") format('woff');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+@font-face {
+  font-family: 'Roboto Slab';
+  font-style: normal;
+  font-display: swap;
+  font-weight: 400;
+  src: url("./webfonts/roboto-slab-latin-400-normal.woff2") format('woff2'), url("./webfonts/roboto-slab-all-400-normal.woff") format('woff');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+$title-font: 'Roboto Slab', 'Helvetica', 'Arial', sans-serif;
+
 body {
-  font-family: 'Helvetica', 'Arial', sans-serif;
+  font-family: 'Open sans', 'Helvetica', 'Arial', sans-serif;
   color: #444;
   font-size: 100%;
   background-color: #ededed;
@@ -12,23 +30,27 @@ body {
 }
 
 h1 {
+  font-family: $title-font;
   font-size: 2.5em;
   text-align: center;
   margin-top: 0;
 }
 
 .subtitle {
+  font-family: $title-font;
   font-size: 1.75em;
   text-align: center;
 }
 
 h2 {
+  font-family: $title-font;
   font-size: 2.5em;
   text-align: center;
   margin-top: 0;
 }
 
 h3 {
+  font-family: $title-font;
   font-size: 1.5em;
   margin: 0;
 }
@@ -61,7 +83,8 @@ header {
 
     li {
       list-style: none;
-      margin-bottom: 10px;
+      margin-bottom: 0.45em;
+      font-size: 0.9em;
     }
   }
 }
@@ -86,6 +109,10 @@ main {
 
   a {
     color: #444;
+  }
+
+  li {
+    margin-bottom: 0.5em;
   }
 
   section p:last-child {
