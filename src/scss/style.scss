@@ -61,8 +61,11 @@ h3 {
 
 header {
   padding: 20px 0;
-  height: 150px;
   background-color: #ededed;
+
+  div:first-child {
+    height: 150px;
+  }
 
   .container {
     position: relative;
@@ -90,6 +93,13 @@ header {
 }
 
 main {
+  .intro {
+    padding: 0 0 20px;
+    text-align: justify;
+    font-size: 1.1em;
+    font-style: italic;
+  }
+
   article {
     padding: 20px 0;
   }
