@@ -1,12 +1,20 @@
 "use strict";
 
-var gulp = require('gulp');
-var sass = require('gulp-sass');
-var cssImport = require('gulp-cssimport');
-var cleanCss = require('gulp-clean-css');
-var concat = require('gulp-concat');
+const {
+  src,
+  dest,
+  series,
+  parallel,
+  watch
+} = require('gulp');
 
-var config = {
+const sass = require('gulp-sass');
+const cssImport = require('gulp-cssimport');
+const cleanCss = require('gulp-clean-css');
+const concat = require('gulp-concat');
+const del = require('del');
+
+const config = {
   src: {
     html: [
       'src/index.html'
@@ -33,30 +41,41 @@ var config = {
   }
 };
 
-gulp.task('build-html', function() {
-  return gulp.src(config.src.html)
-    .pipe(gulp.dest(config.out.dist))
-});
+function html() {
+  return src(config.src.html)
+    .pipe(dest(config.out.dist));
+}
 
-gulp.task('build-images', function() {
-  return gulp.src(config.src.images)
-    .pipe(gulp.dest(config.out.images))
-});
+function images() {
+  return src(config.src.images)
+    .pipe(dest(config.out.images));
+}
 
-gulp.task('build-fonts', function() {
-  return gulp.src(config.src.fonts)
-    .pipe(gulp.dest(config.out.fonts))
-});
+function fonts() {
+  return src(config.src.fonts)
+    .pipe(dest(config.out.fonts));
+}
 
-gulp.task('build-css', function() {
-  return gulp.src(config.src.css)
+function css() {
+  return src(config.src.css)
     .pipe(sass())
     .pipe(cssImport())
     .pipe(cleanCss({
       compatibility: '*'
     }))
     .pipe(concat('style.css'))
-    .pipe(gulp.dest(config.out.dist));
-});
+    .pipe(dest(config.out.dist));
+}
 
-gulp.task('build', gulp.parallel('build-html', 'build-images', 'build-fonts', 'build-css'));
+exports.clean = function() {
+  return del(config.out.dist);
+}
+
+exports.build = parallel(html, images, fonts, css);
+
+exports.watch = function() {
+  watch(config.src.html, html);
+  watch(config.src.images, images);
+  watch(config.src.fonts, fonts);
+  watch(config.src.css, css);
+};
