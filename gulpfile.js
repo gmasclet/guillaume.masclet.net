@@ -8,10 +8,13 @@ const {
   watch
 } = require('gulp');
 
+const htmlmin = require('gulp-htmlmin');
 const sass = require('gulp-sass');
 const cssImport = require('gulp-cssimport');
 const cleanCss = require('gulp-clean-css');
 const concat = require('gulp-concat');
+const sourcemaps = require('gulp-sourcemaps');
+const uglify = require('gulp-uglify');
 const del = require('del');
 
 const config = {
@@ -32,6 +35,10 @@ const config = {
     css: [
       'src/scss/*.scss',
       'node_modules/@fortawesome/fontawesome-free/css/all.css'
+    ],
+    js: [
+      'node_modules/jquery/dist/jquery.js',
+      'src/js/*.js'
     ]
   },
   out: {
@@ -43,6 +50,10 @@ const config = {
 
 function html() {
   return src(config.src.html)
+    .pipe(htmlmin({
+      collapseWhitespace: true,
+      collapseInlineTagWhitespace: true
+    }))
     .pipe(dest(config.out.dist));
 }
 
@@ -67,15 +78,25 @@ function css() {
     .pipe(dest(config.out.dist));
 }
 
+function js() {
+  return src(config.src.js)
+    .pipe(sourcemaps.init())
+    .pipe(uglify())
+    .pipe(concat('app.js'))
+    .pipe(sourcemaps.write('maps'))
+    .pipe(dest(config.out.dist));
+}
+
 exports.clean = function() {
   return del(config.out.dist);
 }
 
-exports.build = parallel(html, images, fonts, css);
+exports.build = parallel(html, images, fonts, css, js);
 
 exports.watch = function() {
   watch(config.src.html, html);
   watch(config.src.images, images);
   watch(config.src.fonts, fonts);
   watch(config.src.css, css);
+  watch(config.src.js, js);
 };
