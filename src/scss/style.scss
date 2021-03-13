@@ -23,22 +23,105 @@ body {
   background-color: #ededed;
   margin: 0;
 }
+@media(min-width:1050px) {
+  .container {
+    max-width: 900px;
+    margin: 0 auto;
+  }
 
-.container {
-  max-width: 900px;
-  margin: 0 auto;
+  header {
+    padding: 20px 0;
+  }
+}
+@media(max-width:1049px) {
+  .container {
+    max-width: 100%;
+    margin: 0;
+    padding: 0 20px;
+  }
+
+  nav {
+    display: none;
+  }
+
+  header {
+    padding: 20px;
+  }
+}
+@media(min-width:650px) {
+  h1 {
+    font-size: 2.5em;
+  }
+
+  .subtitle {
+    font-size: 1.75em;
+  }
+
+  .job-title {
+    font-size: 1.3em;
+  }
+
+  header {
+    div:first-child {
+      height: 150px;
+    }
+
+    img {
+      height: 150px;
+    }
+  }
+}
+@media(max-width:649px) {
+  h1 {
+    font-size: 1.5em;
+  }
+
+  .subtitle {
+    font-size: 1em;
+  }
+
+  header {
+    div:first-child {
+      height: 100px;
+    }
+
+    img {
+      height: 100px;
+    }
+  }
+
+  .job-title {
+    font-size: 1em;
+  }
+
+  .location,
+  .timespan {
+    font-size: 1em;
+  }
+}
+@media(min-width:800px) {
+  .tools {
+    max-width: 741px;
+  }
+}
+@media(max-width:799px) {
+  .skills img {
+    display: none;
+  }
+
+  .tools {
+    max-width: 371px;
+  }
 }
 
 h1 {
   font-family: $title-font;
-  font-size: 2.5em;
   text-align: center;
   margin-top: 0;
 }
 
 .subtitle {
   font-family: $title-font;
-  font-size: 1.75em;
   text-align: center;
 }
 
@@ -56,7 +139,7 @@ h3 {
 }
 
 .job-title {
-  font-size: 1.3em;
+  text-align: left;
 }
 
 a {
@@ -89,12 +172,7 @@ nav {
 }
 
 header {
-  padding: 20px 0;
   background-color: #d0d0d0;
-
-  div:first-child {
-    height: 150px;
-  }
 
   .container {
     position: relative;
@@ -104,7 +182,6 @@ header {
     position: absolute;
     left: 0;
     top: 0;
-    height: 150px;
   }
 
   ul {
@@ -123,7 +200,7 @@ header {
 
 main {
   .intro {
-    padding: 0 0 20px;
+    margin-bottom: 20px;
     text-align: justify;
     font-size: 1.1em;
     font-style: italic;
@@ -147,7 +224,7 @@ main {
   }
 
   a {
-    text-decoration: underline;     
+    text-decoration: underline;
   }
 
   li {
@@ -167,6 +244,7 @@ main {
 
     img {
       width: 150px;
+      height: 150px;
       margin-right: 20px;
     }
   }
@@ -183,7 +261,7 @@ main {
   }
 
   .skills {
-    width: 741px;
+    max-width: 741px;
     margin: 0 auto;
 
     img {
@@ -194,7 +272,6 @@ main {
   }
 
   .tools {
-    width: 741px;
     margin: 0 auto;
 
     img {
