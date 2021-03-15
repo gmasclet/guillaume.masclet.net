@@ -9,6 +9,7 @@ const {
 } = require('gulp');
 
 const htmlmin = require('gulp-htmlmin');
+const jsonminify = require('gulp-jsonminify');
 const sass = require('gulp-sass');
 const cssImport = require('gulp-cssimport');
 const cleanCss = require('gulp-clean-css');
@@ -21,6 +22,12 @@ const config = {
   src: {
     html: [
       'src/index.html'
+    ],
+    manifest: [
+      'src/manifest.json'
+    ],
+    favicons: [
+      'src/favicons/*.*'
     ],
     images: [
       'src/images/*.*'
@@ -54,6 +61,17 @@ function html() {
       collapseWhitespace: true,
       collapseInlineTagWhitespace: true
     }))
+    .pipe(dest(config.out.dist));
+}
+
+function manifest() {
+  return src(config.src.manifest)
+    .pipe(jsonminify())
+    .pipe(dest(config.out.dist));
+}
+
+function favicons() {
+  return src(config.src.favicons)
     .pipe(dest(config.out.dist));
 }
 
@@ -91,10 +109,12 @@ exports.clean = function() {
   return del(config.out.dist);
 }
 
-exports.build = parallel(html, images, fonts, css, js);
+exports.build = parallel(html, manifest, favicons, images, fonts, css, js);
 
 exports.watch = function() {
   watch(config.src.html, html);
+  watch(config.src.manifest, manifest);
+  watch(config.src.favicons, favicons);
   watch(config.src.images, images);
   watch(config.src.fonts, fonts);
   watch(config.src.css, css);

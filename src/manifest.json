@@ -1,0 +1,33 @@
+{
+  "name": "Guillaume Masclet",
+  "short_name": "Guillaume Masclet",
+  "start_url": ".",
+  "background_color": "#ffffff",
+  "display": "standalone",
+  "description": "Expert du numérique avec près de dix ans d'expérience, j'ai un solide bagage technique doublé d'une bonne expérience en management et gestion de projet. Toujours à la recherche de nouveaux challenges, je suis prêt à vous accompagner sur vos projets les plus ambitieux.",
+  "icons": [{
+    "src": "/favicon.png",
+    "sizes": "57x57",
+    "type": "image/png"
+  }, {
+    "src": "/favicon72.png",
+    "sizes": "72x72",
+    "type": "image/png"
+  }, {
+    "src": "/favicon114.png",
+    "sizes": "114x114",
+    "type": "image/png"
+  }, {
+    "src": "/favicon144.png",
+    "sizes": "144x144",
+    "type": "image/png"
+  }, {
+    "src": "/favicon192.png",
+    "sizes": "192x192",
+    "type": "image/png"
+  }, {
+    "src": "/favicon512.png",
+    "sizes": "512x512",
+    "type": "image/png"
+  }]
+}
