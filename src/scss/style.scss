@@ -274,6 +274,31 @@ main {
   .tools {
     margin: 0 auto;
 
+    .tooltip-container {
+      position: relative;
+      cursor: pointer;
+    }
+
+    .tooltip {
+      display: none;
+      position: absolute;
+      z-index: 1;
+      top: 10px;
+      left: 10px;
+      padding: 0.5rem;
+      background: #333;
+      color: #e0e0e0;
+      font-size: 0.8em;
+      border-radius: 3px;
+      overflow: visible;
+      white-space: nowrap;
+    }
+
+    .tooltip-container:focus .tooltip,
+    .tooltip-container:hover .tooltip {
+      display: inline-block;
+    }
+
     img {
       display: inline-block;
       margin: 10px;
