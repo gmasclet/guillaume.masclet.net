@@ -114,6 +114,29 @@ body {
     max-width: 371px;
   }
 }
+@media(max-width:399px) {
+  body {
+    font-size: 80%;
+  }
+
+  h1 {
+    font-size: 1.3em;
+  }
+
+  header {
+    div:first-child {
+      height: 80px;
+    }
+
+    img {
+      height: 80px;
+    }
+  }
+
+  .tools {
+    max-width: 220px;
+  }
+}
 
 h1 {
   font-family: $title-font;
