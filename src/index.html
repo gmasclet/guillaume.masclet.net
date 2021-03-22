@@ -1,13 +1,13 @@
 <!DOCTYPE html>
-<html>
+<html lang="${{ _lang_ }}$">
 
 <head>
   <title>Guillaume Masclet</title>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="author" content="Guillaume Masclet">
-  <meta name="description"
-    content="Expert du numérique avec près de dix ans d'expérience, j'ai un bagage technique conséquent doublé d'une solide expérience en management et gestion de projet. Toujours à la recherche de nouveaux challenges, je suis prêt à vous accompagner sur vos projets les plus ambitieux.">
+  <meta name="description" content="${{ index.description }}$">
+  <base href="/">
   <link rel="apple-touch-icon-precomposed" sizes="144x144" href="favicon144.png">
   <link rel="apple-touch-icon-precomposed" sizes="114x114" href="favicon114.png">
   <link rel="apple-touch-icon-precomposed" sizes="72x72" href="favicon72.png">
@@ -19,11 +19,15 @@
 
 <body>
   <nav>
-    <a href="#experience">Expériences Professionnelles</a>
-    <a href="#portfolio">Portfolio</a>
-    <a href="#formation">Formation</a>
-    <a href="#competences">Compétences</a>
-    <a href="#technos">Technos</a>
+    <div class="container">
+      <a href="#experience">${{ index.experience }}$</a>
+      <a href="#portfolio">${{ index.portfolio }}$</a>
+      <a href="#formation">${{ index.education }}$</a>
+      <a href="#competences">${{ index.skills }}$</a>
+      <a href="#technos">${{ index.tools }}$</a>
+      <a class="language" href="/en">🇬🇧</a>
+      <a class="language" href="/fr">🇫🇷</a>
+    </div>
   </nav>
   <header>
     <div class="container">
@@ -31,6 +35,7 @@
       <h1>Guillaume Masclet</h1>
       <div class="subtitle">Chef de projet technique</div>
       <ul>
+        <li><a class="language" href="/fr">🇫🇷</a><a class="language" href="/en">🇬🇧</a></li>
         <li><i class="fas fa-fw fa-male"></i>&nbsp;34 ans</li>
         <li><i class="fas fa-fw fa-home"></i>&nbsp;Paris</li>
         <li><a href="https://www.linkedin.com/in/guillaume-masclet-82931a88/" target="_blank"><i class="fab fa-fw fa-linkedin"></i>&nbsp;Linkedin</a></li>
@@ -41,15 +46,11 @@
   <main>
     <article>
       <div class="container intro">
-        <p>
-          Expert du numérique avec près de dix ans d'expérience, j'ai un bagage technique conséquent doublé d'une solide expérience
-          en management et gestion de projet. Toujours à la recherche de nouveaux challenges, je suis prêt à vous accompagner
-          sur vos projets les plus ambitieux.
-        </p>
+        <p>${{ index.description }}$</p>
       </div>
 
       <div class="container">
-        <h2 id="experience">Expériences Professionnelles</h2>
+        <h2 id="experience">${{ index.experience }}$</h2>
 
         <section>
           <div class="section-title">
@@ -171,7 +172,7 @@
 
     <article>
       <div class="container">
-        <h2 id="portfolio">Portfolio</h2>
+        <h2 id="portfolio">${{ index.portfolio }}$</h2>
 
         <section>
           <div class="mission">
@@ -229,7 +230,7 @@
 
     <article>
       <div class="container">
-        <h2 id="formation">Formation</h2>
+        <h2 id="formation">${{ index.education }}$</h2>
 
         <section>
           <div class="section-title">
@@ -260,7 +261,7 @@
 
     <article>
       <div class="container">
-        <h2 id="competences">Compétences</h2>
+        <h2 id="competences">${{ index.skills }}$</h2>
         <section class="skills">
           <img src="images/safe.png" alt="SAFe" />
           <ul>
@@ -278,7 +279,7 @@
 
     <article>
       <div class="container">
-        <h2 id="technos">Technos</h2>
+        <h2 id="technos">${{ index.tools }}$</h2>
 
         <section class="tools">
           <img src="images/aws.png" alt="AWS" />
@@ -319,7 +320,7 @@
 
   <footer>
     <div class="container">
-      © Guillaume Masclet - Ce site a été réalisé avec&nbsp;<i class="fa fa-heart"></i>&nbsp;grâce à npm, Gulp, Sass, Font-Awesome, Nginx et Docker
+      © Guillaume Masclet - ${{ index.madeWith }}$&nbsp;<i class="fa fa-heart"></i>&nbsp;${{ index.thanksTo }}$
     </div>
   </footer>
 </body>

@@ -8,6 +8,7 @@ const {
   watch
 } = require('gulp');
 
+const i18n = require('gulp-html-i18n');
 const htmlmin = require('gulp-htmlmin');
 const jsonminify = require('gulp-jsonminify');
 const sass = require('gulp-sass');
@@ -19,6 +20,19 @@ const uglify = require('gulp-uglify');
 const del = require('del');
 
 const config = {
+  i18n: {
+    langDir: 'src/lang',
+    trace: true,
+    createLangDirs: true,
+    defaultLang: 'fr'
+  },
+  htmlmin: {
+    collapseWhitespace: true,
+    collapseInlineTagWhitespace: true
+  },
+  cleanCss: {
+    compatibility: '*'
+  },
   src: {
     html: [
       'src/index.html'
@@ -57,10 +71,8 @@ const config = {
 
 function html() {
   return src(config.src.html)
-    .pipe(htmlmin({
-      collapseWhitespace: true,
-      collapseInlineTagWhitespace: true
-    }))
+    .pipe(i18n(config.i18n))
+    .pipe(htmlmin(config.htmlmin))
     .pipe(dest(config.out.dist));
 }
 
@@ -89,9 +101,7 @@ function css() {
   return src(config.src.css)
     .pipe(sass())
     .pipe(cssImport())
-    .pipe(cleanCss({
-      compatibility: '*'
-    }))
+    .pipe(cleanCss(config.cleanCss))
     .pipe(concat('style.css'))
     .pipe(dest(config.out.dist));
 }

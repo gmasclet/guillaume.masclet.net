@@ -1,4 +1,4 @@
-(function($) {
+(function() {
     'use scrict';
 
     function addTooltip(image) {
@@ -13,8 +13,8 @@
 
       image.parentNode.insertBefore(container, image);
       container.appendChild(image);
-      container.appendChild(tooltip); 
+      container.appendChild(tooltip);
   }
 
   Array.prototype.forEach.call(document.querySelectorAll('.tools img'), addTooltip);
-})(window.jQuery);
+})();
