@@ -123,6 +123,7 @@ exports.build = parallel(html, manifest, favicons, images, fonts, css, js);
 
 exports.watch = function() {
   watch(config.src.html, html);
+  watch(config.i18n.langDir, html);  
   watch(config.src.manifest, manifest);
   watch(config.src.favicons, favicons);
   watch(config.src.images, images);
