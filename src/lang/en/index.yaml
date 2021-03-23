@@ -10,10 +10,13 @@ departmentManager:    Department manager
 projectManager:       Technical project manager
 softwareEngineer:     Software engineer
 endOfStudyInternship: End of study internship
+internship:           Internship
 jemsPeriod:           Since 2017
 broceliaCpPeriod:     March 2015 - December 2016
 broceliaDevPeriod:    January 2014 - February 2015
 sparkDevPeriod:       January 2012 - December 2013
-sparkStagePeriof:     July 2011 - December 2011
+sparkStagePeriod:     July 2011 - December 2011
+sncStagePeriod:       June 2009 - September 2009
 paris:                Paris, France
 plessisRobinson:      Le Plessis-Robinson, France
+calgary:              Calgary, Canada
