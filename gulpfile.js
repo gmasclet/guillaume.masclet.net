@@ -40,7 +40,9 @@ const config = {
     manifest: [
       'src/manifest.json'
     ],
-    favicons: [
+    root: [
+      'src/robots.txt',
+      'src/sitemap.xml',
       'src/favicons/*.*'
     ],
     images: [
@@ -76,14 +78,18 @@ function html() {
     .pipe(dest(config.out.dist));
 }
 
+function delFrFolder() {
+  return del(config.out.dist + '/fr');
+}
+
 function manifest() {
   return src(config.src.manifest)
     .pipe(jsonminify())
     .pipe(dest(config.out.dist));
 }
 
-function favicons() {
-  return src(config.src.favicons)
+function root() {
+  return src(config.src.root)
     .pipe(dest(config.out.dist));
 }
 
@@ -119,13 +125,13 @@ exports.clean = function() {
   return del(config.out.dist);
 }
 
-exports.build = parallel(html, manifest, favicons, images, fonts, css, js);
+exports.build = parallel(series(html, delFrFolder), manifest, root, images, fonts, css, js);
 
 exports.watch = function() {
-  watch(config.src.html, html);
-  watch(config.i18n.langDir, html);  
+  watch(config.src.html, series(html, delFrFolder));
+  watch(config.i18n.langDir, series(html, delFrFolder));
   watch(config.src.manifest, manifest);
-  watch(config.src.favicons, favicons);
+  watch(config.src.root, root);
   watch(config.src.images, images);
   watch(config.src.fonts, fonts);
   watch(config.src.css, css);
