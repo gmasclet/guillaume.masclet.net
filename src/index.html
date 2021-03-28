@@ -213,30 +213,29 @@
 
         <section>
           <div class="section-title">
-            <img src="images/telecom.jpg" alt="Telecom ParisTech" />
+            <img src="images/telecom.png" alt="${{ index.telecom }}$" />
             <div>
-              <h3>Télécom ParisTech</h3>
-              <div class="job-title">Mastère Spécialisé Ingénierie du Logiciel</div>
+              <h3>${{ index.telecom }}$</h3>
+              <div class="job-title">${{ index.telecomDiploma }}$</div>
               <div class="timespan"><i class="fas fa-fw fa-hourglass-half"></i>&nbsp;2010 - 2011</div>
-              <div class="location"><i class="fas fa-fw fa-map-marker-alt"></i>&nbsp;Paris</div>
+              <div class="location"><i class="fas fa-fw fa-map-marker-alt"></i>&nbsp;${{ index.paris }}$</div>
             </div>
           </div>
         </section>
 
         <section>
           <div class="section-title">
-            <img src="images/arts-et-metiers.jpg" alt="Arts et Métiers ParisTech" />
+            <img src="images/arts-et-metiers.jpg" alt="${{ index.ensam }}$" />
             <div>
-              <h3>Arts et Métiers ParisTech</h3>
-              <div class="job-title">Ingénieur ENSAM</div>
+              <h3>${{ index.ensam }}$</h3>
+              <div class="job-title">${{ index.ensamDiploma }}$</div>
               <div class="timespan"><i class="fas fa-fw fa-hourglass-half"></i>&nbsp;2007 - 2010</div>
-              <div class="location"><i class="fas fa-fw fa-map-marker-alt"></i>&nbsp;Lille, Paris</div>
+              <div class="location"><i class="fas fa-fw fa-map-marker-alt"></i>&nbsp;${{ index.lilleParis }}$</div>
             </div>
           </div>
         </section>
       </div>
     </article>
-
 
     <article>
       <div class="container">

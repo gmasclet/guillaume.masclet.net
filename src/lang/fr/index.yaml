@@ -21,6 +21,7 @@ sncStagePeriod:         Juin 2009 - Septembre 2009
 paris:                  Paris
 plessisRobinson:        Le Plessis-Robinson
 calgary:                Calgary, Canada
+lilleParis:             Lille, Paris
 jems1:                  Gestion de l’activité du pôle .NET & TMA, constitué de sept personnes.
 jems2:                  Poste dans la continuité de mes précédentes fonctions chez Brocelia, issu de la fusion des équipes .NET et TMA PHP (Symfony, Joomla, Drupal, Wordpress), laquelle représente une trentaine de clients.
 jems3:                  Challenge managérial, du fait d’une activité hétérogène.
@@ -50,3 +51,7 @@ portfolioCinando:       2020 : refonte du moteur de recherche de&nbsp;<a href="h
 portfolioCegid:         2019 : Dans le cadre du projet One Cegid Data, visant à mettre en place un datalake aggrégeant l’ensemble des données des applications de l’éditeur Cegid, développement d’un pipeline trackant les changements de données de l’application Quadratus. Volumétrie à traiter importante avec 20 millions de bases de données Access au total, et 600 000 bases modifiées par jour en moyenne (représentant de l’ordre de 1,5 teraoctet).
 portfolioCnosf:         2018 : Cadrage fonctionnel et suivi technique du projet de numérisation du Médicosport-santé, ouvrage édité par le CNOSF (Comité national olympique et sportif français), en partenariat avec Vidal. Organisation des ateliers de cadrage fonctionnel avec le client, rédaction des spécifications fonctionnelles et techniques détaillées (modèle de données et API REST). Suivi du développement de l’application PHP Symfony (Backend d’administration et API exposant les données du Médicosport-santé).
 portfolioRockwool:      2018 : Suivi du projet&nbsp;<a href="https://rockcalc.rockwool.fr" target="_blank">Rockcalc</a>, une application web monopage basée sur Angular, permettant aux clients de Rockwool de définir et calculer leur projets d'isolation de combles. Cadrage du besoin client, encadrement de l'équipe de développement et mise en place du pipeline de CI/CD.
+telecom:                Télécom Paris
+telecomDiploma:         Mastère Spécialisé Ingénierie du Logiciel
+ensam:                  École Nationale Supérieure d'Arts et Métiers
+ensamDiploma:           Ingénieur ENSAM

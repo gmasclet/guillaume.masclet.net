@@ -21,6 +21,7 @@ sncStagePeriod:         June 2009 - September 2009
 paris:                  Paris, France
 plessisRobinson:        Le Plessis-Robinson, France
 calgary:                Calgary, Canada
+lilleParis:             Lille, Paris, France
 jems1:                  Management of the .NET & PHP maintenance team, comprising seven people.
 jems2:                  This is a continuation of my previous position at Brocelia, which resulted from the merger of the .NET and TMA PHP teams (Symfony, Joomla, Drupal, Wordpress), representing about thirty clients.
 jems3:                  Managerial challenge, due to a heterogeneous activity.
@@ -50,3 +51,7 @@ portfolioCinando:       2020: Redesign of the&nbsp;<a href="https://cinando.com"
 portfolioCegid:         2019: As part of the One Cegid Data project, which intented to set up a datalake aggregating all the data from Cegid's applications, development of a pipeline tracking data changes in the Quadratus application. Substantial volume of data to process, with a total of 20 million Access databases, and 600,000 databases modified per day on average (representing around 1.5 terabytes).
 portfolioCnosf:         2018: Functional design and technical supervision of the Médicosport-santé digitisation project, a book published by the CNOSF (French National Olympic and Sports Committee), in partnership with Vidal. Organisation of design workshops with the client, writing of functional and technical specifications (data model and REST API). Technical supervision of the development of the PHP Symfony web application (administration backend and API exposing Médicosport-santé data).
 portfolioRockwool:      2018: Supervision of the&nbsp;<a href="https://rockcalc.rockwool.fr" target="_blank">Rockcalc</a>&nbsp;project, an Angular single page application allowing Rockwool's customers to define and calculate their roof isolation projects. Definition of the functional requirements with the client, supervision of the development team and implementation of the CI/CD pipeline.
+telecom:                Télécom Paris
+telecomDiploma:         Post-Master’s in Software Engineering
+ensam:                  Arts et Métiers Institute of Technology
+ensamDiploma:           Arts et Métiers Engineer
