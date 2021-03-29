@@ -49,7 +49,9 @@ body {
   }
 }
 @media(max-width:399px) {
-  body {
+  footer,
+  header,
+  main {
     font-size: 80%;
   }
 
