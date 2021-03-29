@@ -1,0 +1,82 @@
+.intro {
+  margin-bottom: 20px;
+  text-align: justify;
+  font-size: 1.1em;
+  font-style: italic;
+}
+
+main {
+  article {
+    padding: 20px 0;
+  }
+
+  article:nth-child(odd) {
+    background-color: white;
+  }
+
+  article:nth-child(even) {
+    background-color: #d0d0d0;
+  }
+
+  section {
+    padding: 20px 0;
+    text-align: justify;
+  }
+
+  a {
+    text-decoration: underline;
+  }
+
+  li {
+    margin-bottom: 0.5em;
+  }
+
+  section p:last-child {
+    margin-bottom: 0;
+  }
+}
+
+.section-title {
+  display: flex;
+
+  .job-title {
+    text-align: left;
+  }
+
+  div div {
+    margin: 10px 0;
+  }
+
+  img {
+    width: 150px;
+    height: 150px;
+    margin-right: 20px;
+  }
+}
+
+.mission {
+  display: flex;
+  margin: 0 0 20px;
+
+  img {
+    width: 100px;
+    height: 100px;
+    margin-right: 20px;
+  }
+}
+@media(max-width:799px) {
+  .skills img {
+    display: none;
+  }
+}
+
+.skills {
+  max-width: 741px;
+  margin: 0 auto;
+
+  img {
+    width: 100px;
+    height: 100px;
+    float: right;
+  }
+}

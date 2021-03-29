@@ -1,0 +1,50 @@
+@media(min-width:800px) {
+  .tools {
+    max-width: 741px;
+  }
+}
+@media(max-width:799px) {
+  .tools {
+    max-width: 371px;
+  }
+}
+@media(max-width:399px) {
+  .tools {
+    max-width: 220px;
+  }
+}
+
+.tools {
+  margin: 0 auto;
+
+  .tooltip-container {
+    position: relative;
+    cursor: pointer;
+  }
+
+  .tooltip {
+    display: none;
+    position: absolute;
+    z-index: 1;
+    top: 10px;
+    left: 35px;
+    padding: 0.5rem;
+    background: #333;
+    color: $header-color;
+    font-size: 0.8em;
+    border-radius: 3px;
+    overflow: visible;
+    white-space: nowrap;
+  }
+
+  .tooltip-container:focus .tooltip,
+  .tooltip-container:hover .tooltip {
+    display: inline-block;
+  }
+
+  img {
+    display: inline-block;
+    margin: 10px;
+    width: 50px;
+  }
+}

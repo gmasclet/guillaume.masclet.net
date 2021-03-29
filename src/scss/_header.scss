@@ -1,0 +1,132 @@
+@media(min-width:1100px) {
+  nav .container {
+    max-width: 1100px;
+  }
+
+  header .language {
+    display: none;
+  }
+}
+@media(max-width:1099px) {
+  nav {
+    display: none;
+  }
+}
+@media(min-width:1050px) {
+  header {
+    padding: 20px 0;
+  }
+}
+@media(max-width:1049px) {
+  header {
+    padding: 20px;
+  }
+}
+@media(min-width:650px) {
+  header {
+    div:first-child {
+      height: 150px;
+    }
+
+    img {
+      height: 150px;
+    }
+  }
+}
+@media(max-width:649px) {
+  header {
+    div:first-child {
+      height: 130px;
+    }
+
+    img {
+      height: 130px;
+    }
+  }
+}
+@media(max-width:399px) {
+  header {
+    div:first-child {
+      height: 80px;
+    }
+
+    img {
+      height: 80px;
+    }
+  }
+}
+
+nav {
+  text-align: left;
+  background-color: #050505;
+  padding: 20px 0;
+
+  a {
+    font-family: $title-font;
+    font-size: 1.2em;
+    text-decoration: none;
+    cursor: pointer;
+    margin: 0 40px;
+  }
+
+  a:first-child {
+    margin-left: 0;
+  }
+
+  .language {
+    margin: 0 0 0 10px;
+    float: right;
+  }
+}
+
+.language {
+  font-size: 1.5em;
+  opacity: 0.5;
+}
+
+.language.current {
+  opacity: 1;
+}
+
+header {
+  background: url("./images/background.jpg");
+  background-size: cover;
+  color: $header-color;
+
+  .container {
+    position: relative;
+  }
+
+  img {
+    position: absolute;
+    left: 0;
+    top: 0;
+  }
+
+  ul {
+    position: absolute;
+    right: 0;
+    top: 0;
+    margin-top: 0;
+
+    li {
+      list-style: none;
+      margin-bottom: 0.45em;
+      font-size: 0.9em;
+    }
+  }
+
+  .language {
+    margin: 0 10px 0 0;
+  }
+}
+
+header a,
+nav a {
+  color: $header-color;
+}
+
+header a:hover,
+nav a:hover {
+  color: white;
+}
