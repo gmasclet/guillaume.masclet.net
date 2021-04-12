@@ -7,6 +7,7 @@ REMOTE_PATH=/home/guillaume/www/guillaume.masclet.net/
 
 rsync -av --delete \
     --exclude=deploy.sh \
+    --exclude=NOTICE.txt \
     --exclude=README.md \
     --exclude=.git \
     --exclude=.env \
