@@ -2,6 +2,6 @@
 version: "3.7"
 services:
   web:
-    environment:      
+    environment:
       LETSENCRYPT_HOST: $PROXY_VIRTUAL_HOST
-      LETSENCRYPT_EMAIL: guillaume@masclet.net
+      LETSENCRYPT_EMAIL: $LETSENCRYPT_EMAIL
