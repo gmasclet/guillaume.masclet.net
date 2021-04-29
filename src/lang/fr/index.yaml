@@ -25,17 +25,22 @@ plessisRobinson:        Le Plessis-Robinson
 calgary:                Calgary, Canada
 lilleParis:             Lille, Paris
 jems1:                  Gestion de l’activité du pôle .NET & TMA, constitué de sept personnes.
-jems2:                  Poste dans la continuité de mes précédentes fonctions chez Brocelia, issu de la fusion des équipes .NET et TMA PHP (Symfony, Joomla, Drupal, Wordpress), laquelle représente une trentaine de clients.
-jems3:                  Challenge managérial, du fait d’une activité hétérogène.
-jems4:                  Fiabilisation des process de développement par la généralisation de l’intégration continue (Jenkins) et la mise en place d’environnements sous Docker.
-jems5:                  À partir de 2018, recentrage sur des projets .NET à forts enjeux, suite à l’intégration dans l'équipe d’un chef de projet dédié à la TMA PHP.
+jems2:                  Poste dans la continuité de mes précédentes fonctions au sein de l'agence web Brocelia, laquelle est devenue une entité de Jems Group en 2017.
+jems3:                  Fait suite à la fusion des équipes .NET et la TMA PHP (Symfony, Drupal, Wordpress, Joomla), qui représente une trentaine de clients.
+jems4:                  Gestion de l’équipe, sur des projets au forfait et de la TMA, et suivi de carrière.
+jems5:                  Chiffrages projet et participation aux avant-ventes.
+jems6:                  Compréhension et analyse des besoins des clients.
+jems7:                  Conception technique, développement, revue de code.
+jems8:                  Participation aux processus de recrutement (entretiens manager et qualification technique).
+jems9:                  Fiabilisation des process de développement par la généralisation de l’intégration continue (Jenkins) et la mise en place d’environnements sous Docker.
+jems10:                 À partir de 2018, recentrage sur des projets .NET à forts enjeux, suite à l’intégration dans l'équipe d’un chef de projet dédié à la TMA PHP.
 broceliaCp1:            Management et gestion du planning de l'équipe .NET, constituée de trois personnes.
 broceliaCp2:            Suivi des demandes et reporting de l'activité au directeur des opérations et aux clients.
 broceliaCp3:            Développement ASP.NET full-stack (MVC / Web-API 2 / Web-forms).
 broceliaCp4:            Gestion de projets au forfait, depuis la conception technique jusqu'au déploiement des livrables et maintenance applicative.
 broceliaCp5:            Garant de la qualité des réalisations techniques.
 broceliaCp6:            Mise en place de nouveaux outils, méthodologies et bonnes pratiques.
-broceliaDev1:           Au sein du pôle .NET de cette agence web, réalisation de projets web en environnement Microsoft ASP.NET full-stack.
+broceliaDev1:           Au sein du pôle .NET de cette agence web, réalisation de projets web.
 broceliaDev2:           Conception technique.
 broceliaDev3:           Développement ASP.NET full-stack (MVC / Web-API 2 / Web-forms).
 sparkDev1:              Spécification et réalisation de nombreux modules métiers et techniques du noyau de ce progiciel de gestion d'archives physiques et électroniques à l'occasion de sa refonte (Java EE, Oracle SQL, JSF, PrimeFaces, Tomcat, Maven, Git).
