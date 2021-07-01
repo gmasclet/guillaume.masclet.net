@@ -5,7 +5,12 @@
   "license": "UNLICENSED",
   "private": true,
   "devDependencies": {
+    "@babel/core": "7.14.6",
+    "@babel/preset-env": "7.14.7",
+    "babelify": "10.0.0",
+    "browserify": "17.0.0",
     "del": "6.0.0",
+    "glob": "7.1.7",
     "gulp": "4.0.2",
     "gulp-clean-css": "4.3.0",
     "gulp-concat": "2.6.1",
@@ -15,7 +20,9 @@
     "gulp-jsonminify": "1.1.0",
     "gulp-sass": "4.1.0",
     "gulp-sourcemaps": "3.0.0",
-    "gulp-uglify": "3.0.2"
+    "gulp-uglify": "3.0.2",
+    "vinyl-buffer": "1.0.1",
+    "vinyl-source-stream": "2.0.0"
   },
   "dependencies": {
     "@fontsource/open-sans": "4.2.2",

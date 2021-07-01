@@ -8,6 +8,7 @@ const {
   watch
 } = require('gulp');
 
+const glob = require('glob');
 const i18n = require('gulp-html-i18n');
 const htmlmin = require('gulp-htmlmin');
 const jsonminify = require('gulp-jsonminify');
@@ -15,6 +16,10 @@ const sass = require('gulp-sass');
 const cssImport = require('gulp-cssimport');
 const cleanCss = require('gulp-clean-css');
 const concat = require('gulp-concat');
+const browserify = require('browserify');
+const babelify = require('babelify');
+const source = require('vinyl-source-stream');
+const buffer = require('vinyl-buffer');
 const sourcemaps = require('gulp-sourcemaps');
 const uglify = require('gulp-uglify');
 const del = require('del');
@@ -32,6 +37,11 @@ const config = {
   },
   cleanCss: {
     compatibility: '*'
+  },
+  babel: {
+    targets: "> 0.2%, last 2 versions, not dead",
+    presets: ["@babel/preset-env"],
+    sourceMaps: true
   },
   src: {
     html: [
@@ -61,7 +71,7 @@ const config = {
     ],
     js: [
       'node_modules/jquery/dist/jquery.js',
-      'src/js/*.js'
+      ...glob.sync('src/js/*.js')
     ]
   },
   out: {
@@ -113,8 +123,12 @@ function css() {
 }
 
 function js() {
-  return src(config.src.js)
-    .pipe(sourcemaps.init())
+  return browserify(config.src.js, { debug: true })
+    .transform(babelify, config.babel)
+    .bundle()
+    .pipe(source('bundle.js'))
+    .pipe(buffer())
+    .pipe(sourcemaps.init({ loadMaps: true }))
     .pipe(uglify())
     .pipe(concat('app.js'))
     .pipe(sourcemaps.write('maps'))

@@ -1,27 +1,30 @@
-(function($) {
-  'use scrict';
+import $ from 'jquery'
 
-  var root = $('html, body');
-  var isMenuOpen = false;
-  var toggleMenu = function() {
-    $('nav .fas').toggle();
-    $('nav .entry').animate({
-      left: isMenuOpen ? '-120%' : '-40px'
-    }, 500);
-    isMenuOpen = !isMenuOpen;
+function scrollToArticle(event) {
+  event.preventDefault();
+
+  root.animate({
+    scrollTop: $($.attr(this, 'href')).offset().top
+  }, 1000);
+
+  if (isMenuOpen) {
+    toggleMenu();
   }
+}
 
-  $(document).on('click', 'a[href^="#"]', function(event) {
-    event.preventDefault();
+function toggleMenu() {
+  burgerIcons.toggle();
+  menuItems.animate({
+    left: isMenuOpen ? '-120%' : '-40px'
+  }, 500);
+  isMenuOpen = !isMenuOpen;
+}
 
-    root.animate({
-      scrollTop: $($.attr(this, 'href')).offset().top
-    }, 1000);
+const root = $('html, body');
+const burgerIcons = $('nav .fas');
+const menuItems = $('nav .entry');
 
-    if (isMenuOpen) {
-      toggleMenu();
-    }
-  });
+let isMenuOpen = false;
 
-  $('nav .fas').click(toggleMenu)
-})(window.jQuery);
+$(document).on('click', 'a[href^="#"]', scrollToArticle);
+burgerIcons.on('click', toggleMenu);
