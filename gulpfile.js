@@ -14,6 +14,7 @@ const htmlmin = require('gulp-htmlmin');
 const jsonminify = require('gulp-jsonminify');
 const sass = require('gulp-sass');
 const cssImport = require('gulp-cssimport');
+const purgeCss = require('gulp-purgecss');
 const cleanCss = require('gulp-clean-css');
 const concat = require('gulp-concat');
 const browserify = require('browserify');
@@ -117,6 +118,7 @@ function css() {
   return src(config.src.css)
     .pipe(sass())
     .pipe(cssImport())
+    .pipe(purgeCss({ content: [config.out.dist + '/**/*.html'] }))
     .pipe(cleanCss(config.cleanCss))
     .pipe(concat('style.css'))
     .pipe(dest(config.out.dist));
@@ -139,7 +141,7 @@ exports.clean = function() {
   return del(config.out.dist);
 }
 
-exports.build = parallel(series(html, delFrFolder), manifest, root, images, fonts, css, js);
+exports.build = parallel(series(html, delFrFolder, css), manifest, root, images, fonts, js);
 
 exports.watch = function() {
   watch(config.src.html, series(html, delFrFolder));
