@@ -12,7 +12,7 @@ const glob = require('glob');
 const i18n = require('gulp-html-i18n');
 const htmlmin = require('gulp-htmlmin');
 const jsonminify = require('gulp-jsonminify');
-const sass = require('gulp-sass');
+const sass = require('gulp-sass')(require('sass'));
 const cssImport = require('gulp-cssimport');
 const purgeCss = require('gulp-purgecss');
 const cleanCss = require('gulp-clean-css');
@@ -137,13 +137,13 @@ function js() {
     .pipe(dest(config.out.dist));
 }
 
-exports.clean = function() {
+exports.clean = function () {
   return del(config.out.dist);
 }
 
 exports.build = parallel(series(html, delFrFolder, css), manifest, root, images, fonts, js);
 
-exports.watch = function() {
+exports.watch = function () {
   watch(config.src.html, series(html, delFrFolder));
   watch(config.i18n.langDir, series(html, delFrFolder));
   watch(config.src.manifest, manifest);
